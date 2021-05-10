@@ -37,3 +37,36 @@ jin.say_hello("Harari")
 rm.arrest("도둑놈아")
 jin.program("Python")
 
+
+# package (모듈의 합, library)
+# module
+
+# animal package
+# dog, cat module
+# doc, cat module can say "hi"
+
+#from animal import dog
+#from animal import cat
+
+# d = dog.Dog() #instance
+# d.hi()
+# c = cat.Cat()
+# c.hi()
+
+from animal import *
+
+myDog = Dog()
+myDog.hi()
+
+from geopy.geocoders import Nominatim
+
+geolocator = Nominatim(user_agent="mingTest")
+location = geolocator.geocode("175 5th Avenue NYC")
+print(location)
+
+location = geolocator.geocode("Dokdo, South Korea")
+print(location)
+print(location.address)
+print(location.latitude)
+print(location.longitude)
+print(location.raw)
